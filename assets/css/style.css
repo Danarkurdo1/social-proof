@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+
+:root{
+
+    --Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsl(333, 80%, 67%);
+
+    --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+}
+
+body{
+    font-size: 15px;
+    background-image: url('../img/bg-pattern-top-mobile.svg'), url('../img/bg-pattern-bottom-mobile.svg');
+    background-repeat: no-repeat , no-repeat;
+    background-position: left top, right bottom;
+}
+
+.container{
+    display: grid;
+    row-gap: 1rem;
+    margin: 4rem 1rem 2rem 1rem;
+}
+
+.header_text{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.header_title{
+    width: 300px;
+    margin-bottom: 1rem;
+    color: var(--Very-Dark-Magenta);
+    font-weight: 700;
+    font-size: 27px;
+}
+
+.header_description{
+    color: var(--Dark-Grayish-Magenta);
+    line-height: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.rate{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.rate_box{
+    background-color: var(--Light-Grayish-Magenta);
+    height: 70px;
+    border-radius: .5rem;
+}
+
+.rate_stars{
+    margin-top: .7rem;
+    margin-bottom: .4rem;
+}
+
+.rate_stars img{
+    padding: 0 .2rem 0 .2rem;
+}
+
+.rate_description{
+    color: var(--Very-Dark-Magenta);
+}
+
+.card{
+    background-color: var(--Very-Dark-Magenta);
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.card_all{
+    display: flex;
+}
+
+.card_photo{
+    border-radius: 50%;
+    width: 40px;
+    margin: 2rem 1rem 1rem 2rem ;
+}
+
+.card_info_user{
+    margin-top: 2.4rem;
+}
+
+.card_name{
+    color: var(--White);
+    font-size: 11px;
+    font-weight: 400;
+    margin-bottom: 0.3rem;
+}
+
+.card_status{
+    color: var(--Soft-Pink);
+    font-size: 11px;
+    font-weight: 400;
+    opacity: 0.6;
+}
+
+.card_description{
+    margin: 1rem 2rem 2rem 2rem;
+    color: var(--White);
+    font-family: 'Spartan', sans-serif;
+    font-weight: 400;
+    line-height: 1.5rem;
+    text-align: left;
+}
+
+
+@media screen and (min-width:1324px) {
+    
+
+    body{
+        background-image: url('../img/bg-pattern-top-desktop.svg'), url('../img/bg-pattern-bottom-desktop.svg');
+        background-position: left top, right bottom;
+    }
+
+    .container{
+        grid-template-columns: repeat(4,1fr);
+        margin: 2rem 2rem 2rem 0rem;
+    }
+
+    
+
+    .header_text{
+        text-align: left;
+        grid-column-start: 1;
+        grid-column-end:   2;
+        align-items: flex-start;
+    }
+
+    .header_title{
+        font-size: 35px;
+        margin-top: 2rem;
+        margin-left: 5rem;
+        text-align: left;
+    }
+
+    .header_description{
+        margin-left: 5rem;
+        width: 365px;
+    }
+
+    .rate{
+        margin-top: 2rem;
+        margin-left: 15rem;
+        grid-column-start: 2;
+        grid-column-end:   4;
+    }
+
+    .rate_box{
+        height: 50px;
+        width: 450px;
+        display: flex;
+        align-items: center;
+        column-gap: 2rem;
+        
+    }
+
+    .rate_description{
+        font-size: 13px;
+        color: var(--Very-Dark-Magenta);
+    }
+
+    .rate_stars{
+        margin-left: 2rem;
+    }
+
+    .rate_stars img {
+        width: 20px;
+    }
+
+    .rate_b{
+        margin-left: 2rem;
+    }
+
+    .rate_c{
+        margin-left: 4rem;
+    }
+
+    .card{
+        width: 330px;
+        height: 230px;
+        margin: 0 1rem 0 5rem;
+    }
+
+    .card_1{
+        grid-column-start: 1;
+        grid-column-end:   2;
+    }
+
+    .card_2{
+        margin-top: 1rem;
+        grid-column-start: 2;
+        grid-column-end:   3;
+    }
+
+    .card_3{
+        margin-top: 2rem;
+        grid-column-start: 3;
+        grid-column-end:   4;
+    }
+}
+
